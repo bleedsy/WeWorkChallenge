@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +22,59 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="egM-Tb-bjT">
+                                <rect key="frame" x="174" y="626" width="676" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FX5-BD-BeI">
+                                <rect key="frame" x="385" y="753" width="254" height="50"/>
+                                <color key="backgroundColor" red="0.52549019607843139" green="0.83137254901960778" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="iZz-rK-fNE"/>
+                                    <constraint firstAttribute="height" constant="50" id="jVv-ym-uSc"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-9i-a9c">
+                                <rect key="frame" x="21" y="110" width="982" height="352"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8cb-9i-a9c" secondAttribute="height" multiplier="491:176" id="8L1-ag-69L"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username or email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdA-hv-KZJ">
+                                <rect key="frame" x="174" y="532" width="676" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FX5-BD-BeI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2RK-8B-IY0"/>
+                            <constraint firstItem="LdA-hv-KZJ" firstAttribute="top" secondItem="8cb-9i-a9c" secondAttribute="bottom" constant="70" id="4Mg-19-5mz"/>
+                            <constraint firstItem="egM-Tb-bjT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9IB-dH-hZk"/>
+                            <constraint firstItem="egM-Tb-bjT" firstAttribute="width" secondItem="LdA-hv-KZJ" secondAttribute="width" id="CCU-jn-Wzf"/>
+                            <constraint firstItem="8cb-9i-a9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="Grm-jQ-pem"/>
+                            <constraint firstItem="FX5-BD-BeI" firstAttribute="top" secondItem="egM-Tb-bjT" secondAttribute="bottom" constant="97" id="PHw-4T-9RF"/>
+                            <constraint firstItem="LdA-hv-KZJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SRV-7W-8At"/>
+                            <constraint firstItem="LdA-hv-KZJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="154" id="YVd-iT-3d5"/>
+                            <constraint firstItem="egM-Tb-bjT" firstAttribute="top" secondItem="LdA-hv-KZJ" secondAttribute="bottom" constant="64" id="dNr-dG-UQw"/>
+                            <constraint firstItem="8cb-9i-a9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="1" id="ede-j0-9j2"/>
+                            <constraint firstItem="8cb-9i-a9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUE-sK-QEh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116.60156249999999" y="83.89458272327964"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github_logo" width="562" height="208"/>
+    </resources>
 </document>
