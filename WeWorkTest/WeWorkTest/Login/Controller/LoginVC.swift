@@ -24,8 +24,21 @@ class LoginVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func checkFields() -> String? {
+        if IBusername.text == "" {
+            return "Username cannot be blank"
+        } else if IBpassword.text == "" {
+            return "Password cannot be blank"
+        }
+        return nil
+    }
+    
 
     @IBAction func login(sender: UIButton) {
-        
+        if checkFields() == nil {
+            
+        } else {
+            
+        }
     }
 }
