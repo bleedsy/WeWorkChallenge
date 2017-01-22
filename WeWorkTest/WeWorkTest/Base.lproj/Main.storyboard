@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeWorkTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="BYZ-38-t0r" customClass="LoginVC" customModule="WeWorkTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -39,6 +39,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zSZ-mj-yVv"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-9i-a9c">
                                 <rect key="frame" x="21" y="110" width="982" height="352"/>
@@ -68,6 +71,10 @@
                             <constraint firstItem="8cb-9i-a9c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mUE-sK-QEh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IBpassword" destination="egM-Tb-bjT" id="cDs-Ti-AXH"/>
+                        <outlet property="IBusername" destination="LdA-hv-KZJ" id="4S7-cs-Cka"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
