@@ -34,11 +34,13 @@ class EditIssueVC: RootVC {
         IBtitle.text = welIssue.welTitle
         IBbody.text = welIssue.welBody
         
+        // Add border and corner radius to text view
         IBbody.layer.borderColor = UIColor.lightGray.cgColor
         IBbody.layer.borderWidth = 2
         IBbody.layer.masksToBounds = true
         IBbody.layer.cornerRadius = 5
         
+        // Change button title based on issue status
         if welIssue.welState?.lowercased() == "closed" {
             IBissueStatus.setTitle("Open Issue", for: .normal)
         } else {

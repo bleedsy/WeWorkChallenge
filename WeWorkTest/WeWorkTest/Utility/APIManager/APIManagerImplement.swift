@@ -33,6 +33,7 @@ class APIManagerImplement: NSObject {
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
             var userRepos = Array<RepoObject>()
             if let repos = result as? NSArray {
+                // Create repo objects and add to array
                 for repoDic in repos {
                     let repo = RepoObject(result: repoDic as! NSDictionary)
                     userRepos.append(repo)
@@ -48,6 +49,7 @@ class APIManagerImplement: NSObject {
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
             var repoIssues = Array<IssueObject>()
             if let issues = result as? NSArray {
+                // Create issue objects and add to array
                 for issueDic in issues {
                     let issue = IssueObject(result: issueDic as! NSDictionary)
                     repoIssues.append(issue)
@@ -61,6 +63,7 @@ class APIManagerImplement: NSObject {
         let fullEndpoint = Constants.API.URL + String(format: PATCHissue, UserInfo.currentUser.welLogin!, repoName, number)
         var params : [String : Any]!
         
+        // If title is nil, only the state is changing
         if title == nil {
             params = ["state" : state!]
         } else {
