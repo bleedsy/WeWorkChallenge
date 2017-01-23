@@ -9,7 +9,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>HanekeSwift.xcscheme</key>
+		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,11 +47,6 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6269E938BFF171D94AFA49292BA6395B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>7665D57B08F8C57B722C2D22BEE3170E</key>
 		<dict>
 			<key>primary</key>
@@ -62,7 +57,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE4759774042D8E013517E82C6F7A058</key>
+		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA2B5A7D8E7C1448B9A54CE0C8BE5E5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

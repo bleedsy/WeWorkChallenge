@@ -40,7 +40,9 @@ class LoginVC: RootVC {
             APIManagerImplement.getUserInfo(completion: { (result, error) in
                 self.hideLoadingView()
                 if error == nil {
-                    
+                    let profileVC = self.getVCFromStoryboard("Main", viewController: "ProfileVC")
+                    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appDelegate.changeRootVC(profileVC)
                 } else {
                     self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
                 }

@@ -21,7 +21,14 @@ class RootVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-        
+    
+    // Gets view controller from storyboard
+    func getVCFromStoryboard(_ storyboard: String, viewController: String) -> UIViewController {
+        let storyboard = UIStoryboard(name: storyboard, bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: viewController)
+        return vc
+    }
+    
     //MARK: Alerts
     func showStandardAlert(_ title: String?, message: String?, style: UIAlertControllerStyle, completion:(() -> Swift.Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)

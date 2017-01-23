@@ -16,8 +16,8 @@ class UserInfo: NSObject {
     var welBio : String?
     var welLogin : String?
     var welAvatarURL : String?
-    var welFollowing : Int?
-    var welFollowers : Int?
+    var welFollowing : Int = 0
+    var welFollowers : Int = 0
     
     fileprivate override init() {
         super.init()
