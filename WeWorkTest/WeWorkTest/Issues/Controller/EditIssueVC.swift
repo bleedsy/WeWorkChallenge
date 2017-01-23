@@ -37,24 +37,42 @@ class EditIssueVC: RootVC {
         IBbody.layer.borderWidth = 2
         IBbody.layer.masksToBounds = true
         IBbody.layer.cornerRadius = 5
-    }
-    
-    //MARK: Actions
-    
-    @IBAction func status(sender: UIButton) {
+        
+        if welIssue.welState?.lowercased() == "closed" {
+            IBissueStatus.setTitle("Open Issue", for: .normal)
+        } else {
+            IBissueStatus.setTitle("Close Issue", for: .normal)
+        }
         
     }
     
-    @IBAction func save(sender: UIButton) {
-        let title = IBtitle.text
-        let body = IBbody.text
+    //MARK: API Call
+    func updateIssue(title: String?, body: String?, state: String?) {
         let number = String(format: "%i", welIssue.welNumber ?? 0)
-        APIManagerImplement.patchUpdateIssue(repoName: welRepo.welName!, number: number, title: title!, body: body, state: welIssue.welState) { (result, error) in
+        showLoadingView()
+        APIManagerImplement.patchUpdateIssue(repoName: welRepo.welName!, number: number, title: title, body: body, state: state) { (result, error) in
+            self.hideLoadingView()
             if error == nil {
                 
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
             }
         }
+    }
+    //MARK: Actions
+    
+    @IBAction func status(sender: UIButton) {
+        if welIssue.welState == "open" {
+            updateIssue(title: nil, body: nil, state: "closed")
+        } else {
+            updateIssue(title: nil, body: nil, state: "open")
+        }
+    }
+    
+    @IBAction func save(sender: UIButton) {
+        let title = IBtitle.text
+        let body = IBbody.text
+        updateIssue(title: title, body: body, state: nil)
+        
     }
 }

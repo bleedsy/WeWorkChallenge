@@ -11,7 +11,6 @@ import UIKit
 class CreateIssueVC: EditIssueVC {
 
     override func viewDidLoad() {
-        IBissueStatus.isHidden = true
         IBbody.layer.borderColor = UIColor.lightGray.cgColor
         IBbody.layer.borderWidth = 2
         IBbody.layer.masksToBounds = true
@@ -28,9 +27,11 @@ class CreateIssueVC: EditIssueVC {
     @IBAction override func save(sender: UIButton) {
         let title = IBtitle.text
         let body = IBbody.text
+        showLoadingView()
         APIManagerImplement.createIssue(repoName: welRepo.welName!, title: title ?? "", body: body) { (result, error) in
+            self.hideLoadingView()
             if error == nil {
-                
+                _ = self.navigationController?.popViewController(animated: true)
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
             }

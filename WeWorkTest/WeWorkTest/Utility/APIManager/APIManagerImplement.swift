@@ -57,9 +57,16 @@ class APIManagerImplement: NSObject {
         }
     }
     
-    class func patchUpdateIssue(repoName: String, number: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func patchUpdateIssue(repoName: String, number: String, title: String?, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: PATCHissue, UserInfo.currentUser.welLogin!, repoName, number)
-        let params : [String : Any] = ["title" : title, "body" : body!, "state" : state!]
+        var params : [String : Any]!
+        
+        if title == nil {
+            params = ["state" : state!]
+        } else {
+            params = ["title" : title!, "body" : body!]
+        }
+        
         APIManager.makePatchRequest(fullEndpoint, params: params) { (result, error) in
             if let issue = result as? NSDictionary {
                 completion(issue, error)

@@ -36,7 +36,7 @@ class APIManager: NSObject {
         Alamofire.request(endPoint,
                           method: .patch,
                           parameters: params,
-                          encoding: URLEncoding.default,
+                          encoding: JSONEncoding.default,
                           headers:headers)
             .validate()
             .responseJSON { response in

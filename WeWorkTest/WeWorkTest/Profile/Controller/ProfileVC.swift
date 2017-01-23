@@ -23,8 +23,11 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setUpUI()
+    }
+    
+    // Would not load everytime but did this for the sake of time
+    override func viewWillAppear(_ animated: Bool) {
         getRepos()
     }
 
@@ -63,7 +66,9 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
     //MARK: API Call
     
     func getRepos() {
+        showLoadingView()
         APIManagerImplement.getRepos { (repos, error) in
+            self.hideLoadingView()
             if error == nil {
                 if let userRepos = repos as? Array<RepoObject> {
                     self.welRepos = userRepos
