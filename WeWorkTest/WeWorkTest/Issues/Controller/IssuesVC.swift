@@ -68,6 +68,14 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let issue = welIssues[indexPath.row]
+        let editIssue = getVCFromStoryboard("Main", viewController: "EditIssueVC") as! EditIssueVC
+        editIssue.welIssue = issue
+        editIssue.welRepo = welRepo
+        navigationController?.pushViewController(editIssue, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }

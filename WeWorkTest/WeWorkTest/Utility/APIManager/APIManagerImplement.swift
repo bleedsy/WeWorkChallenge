@@ -14,6 +14,7 @@ class APIManagerImplement: NSObject {
     static let GETrepos = "/user/repos"
     static let GETissues = "/repos/%@/%@/issues?state=all"
     static let PATCHissue = "/repos/%@/%@/issues/%@"
+    static let POSTissue = "/repos/%@/%@/issues"
 
     //MARK: Login
     class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
@@ -58,8 +59,20 @@ class APIManagerImplement: NSObject {
     
     class func patchUpdateIssue(repoName: String, number: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: PATCHissue, UserInfo.currentUser.welLogin!, repoName, number)
-        let params = ["title" : title, "body" : body ?? "", "state" : state]
+        let params : [String:String] = ["title" : title, "body" : body!, "state" : state!]
         APIManager.makePatchRequest(fullEndpoint, params: params as NSDictionary?) { (result, error) in
+            print(error)
+            if let issue = result as? NSDictionary {
+                print(issue)
+            }
+        }
+    }
+    
+    class func createIssue(repoName: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        let fullEndpoint = Constants.API.URL + String(format: POSTissue, UserInfo.currentUser.welLogin!, repoName)
+        let params : [String:String] = ["title" : title, "body" : body!]
+        APIManager.makePatchRequest(fullEndpoint, params: params as NSDictionary?) { (result, error) in
+            print(error)
             if let issue = result as? NSDictionary {
                 print(issue)
             }

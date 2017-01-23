@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeWorkTest/Utility/APIManager/APIManagerImplement.swift"
-            timestampString = "506881822.922303"
+            timestampString = "506883764.633871"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "patchUpdateIssue(repoName:number:title:body:state:completion:)"
             landmarkType = "7">
          </BreakpointContent>
