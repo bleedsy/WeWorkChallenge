@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6269E938BFF171D94AFA49292BA6395B"
-               BuildableName = "Pods_WeWorkTest.framework"
-               BlueprintName = "Pods-WeWorkTest"
+               BlueprintIdentifier = "AE4759774042D8E013517E82C6F7A058"
+               BuildableName = "Haneke.framework"
+               BlueprintName = "HanekeSwift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6269E938BFF171D94AFA49292BA6395B"
-            BuildableName = "Pods_WeWorkTest.framework"
-            BlueprintName = "Pods-WeWorkTest"
+            BlueprintIdentifier = "AE4759774042D8E013517E82C6F7A058"
+            BuildableName = "Haneke.framework"
+            BlueprintName = "HanekeSwift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

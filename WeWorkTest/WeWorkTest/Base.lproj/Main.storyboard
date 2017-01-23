@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="116.60156249999999" y="83.89458272327964"/>
         </scene>
-        <!--View Controller-->
+        <!--ProfileVC-->
         <scene sceneID="Efe-N2-AWa">
             <objects>
-                <viewController id="2gB-mr-tgl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC" id="2gB-mr-tgl" customClass="ProfileVC" customModule="WeWorkTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y8a-MF-fcy"/>
                         <viewControllerLayoutGuide type="bottom" id="r1e-O6-HUQ"/>
@@ -136,6 +136,10 @@
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="2gB-mr-tgl" id="LwL-7c-bdd"/>
+                                    <outlet property="delegate" destination="2gB-mr-tgl" id="HNs-o2-zHw"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPg-Xn-pu0">
                                 <rect key="frame" x="394" y="236.5" width="575" height="30"/>
@@ -164,6 +168,13 @@
                             <constraint firstItem="494-2X-m4n" firstAttribute="leading" secondItem="e9A-G6-6Gt" secondAttribute="trailing" constant="39" id="jQf-X8-Dta"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="IBavatar" destination="e9A-G6-6Gt" id="Qod-Hh-mCE"/>
+                        <outlet property="IBbio" destination="lPg-Xn-pu0" id="jsu-ze-wDI"/>
+                        <outlet property="IBcollectionView" destination="mta-hY-yOR" id="csW-S3-E3T"/>
+                        <outlet property="IBname" destination="7sx-8W-nB5" id="tnk-9m-LQ6"/>
+                        <outlet property="IBusername" destination="494-2X-m4n" id="Z3O-mC-OJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQz-gT-861" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ProfileVC: RootVC {
+class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBOutlet weak var IBavatar : UIImageView!
+    @IBOutlet weak var IBusername : UILabel!
+    @IBOutlet weak var IBname : UILabel!
+    @IBOutlet weak var IBbio : UILabel!
+    @IBOutlet weak var IBcollectionView : UICollectionView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,5 +26,9 @@ class ProfileVC: RootVC {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setUpUI() {
+        
     }
 }

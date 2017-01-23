@@ -6,6 +6,7 @@ target 'WeWorkTest' do
   use_frameworks!
 pod 'Alamofire'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'HanekeSwift'
 
   # Pods for WeWorkTest
 
