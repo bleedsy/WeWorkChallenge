@@ -22,6 +22,7 @@
 		CA1D9C2E1E35798C00007300 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C2D1E35798C00007300 /* LoginVC.swift */; };
 		CA1D9C311E357AD200007300 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C301E357AD200007300 /* RootVC.swift */; };
 		CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C321E35AA3D00007300 /* UserInfo.swift */; };
+		CA1D9C3A1E35B1D000007300 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C391E35B1D000007300 /* ProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		CA1D9C2D1E35798C00007300 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CA1D9C301E357AD200007300 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
 		CA1D9C321E35AA3D00007300 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		CA1D9C341E35B10000007300 /* WeWorkTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeWorkTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA1D9C391E35B1D000007300 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,11 +140,13 @@
 			children = (
 				CA1D9C211E35717600007300 /* Utility */,
 				CA1D9C291E35797700007300 /* Login */,
+				CA1D9C351E35B1BB00007300 /* Profile */,
 				CA1D9B8C1E355A9100007300 /* AppDelegate.swift */,
 				CA1D9B901E355A9100007300 /* Main.storyboard */,
 				CA1D9B931E355A9100007300 /* Assets.xcassets */,
 				CA1D9B951E355A9100007300 /* LaunchScreen.storyboard */,
 				CA1D9B981E355A9100007300 /* Info.plist */,
+				CA1D9C341E35B10000007300 /* WeWorkTest-Bridging-Header.h */,
 			);
 			path = WeWorkTest;
 			sourceTree = "<group>";
@@ -222,6 +227,38 @@
 			);
 			name = CustomComponents;
 			path = WeWorkTest/CustomComponents;
+			sourceTree = "<group>";
+		};
+		CA1D9C351E35B1BB00007300 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CA1D9C361E35B1BB00007300 /* Controller */,
+				CA1D9C371E35B1BB00007300 /* Model */,
+				CA1D9C381E35B1BB00007300 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		CA1D9C361E35B1BB00007300 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CA1D9C391E35B1D000007300 /* ProfileVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CA1D9C371E35B1BB00007300 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA1D9C381E35B1BB00007300 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		FD3B926A8F1348F7471854F9 /* Pods */ = {
@@ -525,6 +562,7 @@
 				CA1D9C281E35753E00007300 /* APIManagerImplement.swift in Sources */,
 				CA1D9C241E3571B900007300 /* APIManager.swift in Sources */,
 				CA1D9B8D1E355A9100007300 /* AppDelegate.swift in Sources */,
+				CA1D9C3A1E35B1D000007300 /* ProfileVC.swift in Sources */,
 				CA1D9C261E35725D00007300 /* Constants.swift in Sources */,
 				CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */,
 				CA1D9C2E1E35798C00007300 /* LoginVC.swift in Sources */,
@@ -686,6 +724,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandonleeds.WeWorkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeWorkTest/WeWorkTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -701,6 +740,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brandonleeds.WeWorkTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeWorkTest/WeWorkTest-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
