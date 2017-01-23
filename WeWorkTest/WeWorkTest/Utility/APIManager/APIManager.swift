@@ -11,8 +11,8 @@ import Alamofire
 
 class APIManager: NSObject {
     
-    
     class func makeGetRequest(_ endPoint: URLConvertible, params: NSDictionary?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        // For basic authentication
         let credentialData = "\(Constants.userInfo.username):\(Constants.userInfo.password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
@@ -29,6 +29,7 @@ class APIManager: NSObject {
     }
     
     class func makePatchRequest(_ endPoint: URLConvertible, params: Parameters?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        // For basic authentication
         let credentialData = "\(Constants.userInfo.username):\(Constants.userInfo.password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
@@ -45,6 +46,7 @@ class APIManager: NSObject {
     }
     
     class func makePostRequest(_ endPoint: URLConvertible, params: Parameters?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        // For basic authentication
         let credentialData = "\(Constants.userInfo.username):\(Constants.userInfo.password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)", "Content-Type" : "application/json"]

@@ -11,15 +11,20 @@ import UIKit
 class CreateIssueVC: EditIssueVC {
 
     override func viewDidLoad() {
-        IBbody.layer.borderColor = UIColor.lightGray.cgColor
-        IBbody.layer.borderWidth = 2
-        IBbody.layer.masksToBounds = true
-        IBbody.layer.cornerRadius = 5
+        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func setUpUI() {
+        navigationController?.isNavigationBarHidden = false
+        IBbody.layer.borderColor = UIColor.lightGray.cgColor
+        IBbody.layer.borderWidth = 2
+        IBbody.layer.masksToBounds = true
+        IBbody.layer.cornerRadius = 5
     }
     
     //MARK: Actions
@@ -28,7 +33,7 @@ class CreateIssueVC: EditIssueVC {
         let title = IBtitle.text
         let body = IBbody.text
         showLoadingView()
-        APIManagerImplement.createIssue(repoName: welRepo.welName!, title: title ?? "", body: body) { (result, error) in
+        APIManagerImplement.createIssue(repoName: welRepo.welName!, title: title, body: body) { (result, error) in
             self.hideLoadingView()
             if error == nil {
                 _ = self.navigationController?.popViewController(animated: true)
@@ -37,5 +42,4 @@ class CreateIssueVC: EditIssueVC {
             }
         }
     }
-
 }

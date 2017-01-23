@@ -75,9 +75,9 @@ class APIManagerImplement: NSObject {
         }
     }
     
-    class func createIssue(repoName: String, title: String, body: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func createIssue(repoName: String, title: String?, body: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: POSTissue, UserInfo.currentUser.welLogin!, repoName)
-        let params : [String : Any] = ["title" : title, "body" : body!]
+        let params : [String : Any] = ["title" : title!, "body" : body!]
         APIManager.makePostRequest(fullEndpoint, params: params) { (result, error) in
             if let issue = result as? NSDictionary {
                 completion(issue, error)

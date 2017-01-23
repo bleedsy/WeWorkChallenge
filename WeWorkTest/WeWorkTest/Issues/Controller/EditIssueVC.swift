@@ -30,6 +30,7 @@ class EditIssueVC: RootVC {
     //MARK: Setup UI
     
     func setUpUI() {
+        navigationController?.isNavigationBarHidden = false
         IBtitle.text = welIssue.welTitle
         IBbody.text = welIssue.welBody
         
@@ -53,7 +54,7 @@ class EditIssueVC: RootVC {
         APIManagerImplement.patchUpdateIssue(repoName: welRepo.welName!, number: number, title: title, body: body, state: state) { (result, error) in
             self.hideLoadingView()
             if error == nil {
-                
+                _ = self.navigationController?.popViewController(animated: true)
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
             }
@@ -73,6 +74,5 @@ class EditIssueVC: RootVC {
         let title = IBtitle.text
         let body = IBbody.text
         updateIssue(title: title, body: body, state: nil)
-        
     }
 }

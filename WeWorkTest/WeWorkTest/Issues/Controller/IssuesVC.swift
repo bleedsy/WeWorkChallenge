@@ -18,10 +18,11 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setUpUI()
     }
     
-    // Would not load everytime but did this for the sake of time
+    // Would not call api everytime but did this for the sake of time
     override func viewWillAppear(_ animated: Bool) {
         getIssues()
     }
@@ -37,6 +38,7 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         // Register custom cells
         registerCells()
         
+        navigationController?.isNavigationBarHidden = false
         IBrepoName.text = welRepo.welName
     }
     
