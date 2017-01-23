@@ -19,7 +19,8 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var IBfollowers : UILabel!
     @IBOutlet weak var IBfollowing : UILabel!
     
-
+    var welRepos = Array<RepoObject>()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +33,7 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: UI Setup
     // Setup profile UI elements
     func setUpUI() {
         if UserInfo.currentUser.welAvatarURL != nil {
@@ -53,18 +55,25 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         IBfollowing.layer.cornerRadius = IBfollowing.frame.width / 2
     }
     
+    //MARK: API Call
+    
     func getRepos() {
         APIManagerImplement.getRepos { (repos, error) in
             if error == nil {
-                
+                if let userRepos = repos as? Array<RepoObject> {
+                    self.welRepos = userRepos
+                    self.IBcollectionView.reloadData()
+                }
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
             }
         }
     }
     
+    //MARK: CollectionView
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return welRepos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

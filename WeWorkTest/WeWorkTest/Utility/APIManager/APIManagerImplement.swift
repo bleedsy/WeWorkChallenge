@@ -26,10 +26,14 @@ class APIManagerImplement: NSObject {
     class func getRepos(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETrepos
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
+            var userRepos = Array<RepoObject>()
             if let repos = result as? NSArray {
-                print(repos)
+                for repoDic in repos {
+                    let repo = RepoObject(result: repoDic as! NSDictionary)
+                    userRepos.append(repo)
+                }
             }
-            completion(nil, error)
+            completion(userRepos, error)
         }
     
     }
