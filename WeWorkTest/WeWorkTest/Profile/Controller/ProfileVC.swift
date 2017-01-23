@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var IBavatar : UIImageView!
     @IBOutlet weak var IBusername : UILabel!
@@ -36,6 +36,9 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
     //MARK: UI Setup
     // Setup profile UI elements
     func setUpUI() {
+        // Register custom cells with collection view
+        registerCustomCells()
+        
         if UserInfo.currentUser.welAvatarURL != nil {
             let url = URL(string: UserInfo.currentUser.welAvatarURL!)
             IBavatar.kf.setImage(with: url)
@@ -51,6 +54,10 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         // Custom method to make label circular
         IBfollowers.setCircular()
         IBfollowing.setCircular()
+    }
+    
+    func registerCustomCells() {
+        IBcollectionView!.register(UINib(nibName: "RepoCell", bundle: nil), forCellWithReuseIdentifier: "repoCell")
     }
     
     //MARK: API Call
@@ -75,7 +82,17 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "test", for: indexPath)
+        let repo = welRepos[indexPath.row]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "repoCell", for: indexPath) as! RepoCell
+        cell.setUpCell(repo: repo)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 5, 5, 0)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 218, height: 100)
     }
 }

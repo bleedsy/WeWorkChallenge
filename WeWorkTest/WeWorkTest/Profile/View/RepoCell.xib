@@ -11,46 +11,71 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sdX-lG-gBS">
-            <rect key="frame" x="0.0" y="0.0" width="190" height="72"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="sdX-lG-gBS" customClass="RepoCell" customModule="WeWorkTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="177" height="72"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="190" height="72"/>
+                <rect key="frame" x="0.0" y="0.0" width="177" height="72"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjD-fG-UlV">
-                        <rect key="frame" x="8" y="0.0" width="100" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AjD-fG-UlV">
+                        <rect key="frame" x="8" y="5" width="94" height="20"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp4-lT-zZ3">
-                        <rect key="frame" x="8" y="21" width="100" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tp4-lT-zZ3">
+                        <rect key="frame" x="8" y="30" width="167" height="13"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Issues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja1-Tq-vb1">
-                        <rect key="frame" x="8" y="47" width="37" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Issues" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ja1-Tq-vb1">
+                        <rect key="frame" x="8" y="49" width="31.5" height="13"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-Zw-5jV">
-                        <rect key="frame" x="49" y="47" width="24" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq3-RT-E4Y">
+                        <rect key="frame" x="144" y="49" width="25" height="13"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-Zw-5jV" customClass="CustomLabel" customModule="WeWorkTest" customModuleProvider="target">
+                        <rect key="frame" x="49" y="43.5" width="24" height="24"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="0.21169777679999999" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="P2Y-DJ-kNo"/>
+                            <constraint firstAttribute="width" constant="24" id="ibl-Rp-uof"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <size key="customSize" width="190" height="72"/>
-            <point key="canvasLocation" x="74" y="8"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="ja1-Tq-vb1" secondAttribute="bottom" constant="10" id="32u-0d-ewG"/>
+                <constraint firstItem="AjD-fG-UlV" firstAttribute="top" secondItem="sdX-lG-gBS" secondAttribute="top" constant="5" id="4HZ-X8-89a"/>
+                <constraint firstItem="tp4-lT-zZ3" firstAttribute="leading" secondItem="AjD-fG-UlV" secondAttribute="leading" id="66q-6c-Y7g"/>
+                <constraint firstItem="7Lt-Zw-5jV" firstAttribute="leading" secondItem="ja1-Tq-vb1" secondAttribute="trailing" constant="9.5" id="AeU-1l-BV3"/>
+                <constraint firstAttribute="trailing" secondItem="tp4-lT-zZ3" secondAttribute="trailing" constant="2" id="Dmi-sA-K10"/>
+                <constraint firstItem="tp4-lT-zZ3" firstAttribute="top" secondItem="AjD-fG-UlV" secondAttribute="bottom" constant="5" id="NnB-ou-VC7"/>
+                <constraint firstItem="eq3-RT-E4Y" firstAttribute="centerY" secondItem="7Lt-Zw-5jV" secondAttribute="centerY" id="Pyb-Qi-Grd"/>
+                <constraint firstItem="ja1-Tq-vb1" firstAttribute="leading" secondItem="tp4-lT-zZ3" secondAttribute="leading" id="aCu-aV-1l2"/>
+                <constraint firstItem="AjD-fG-UlV" firstAttribute="leading" secondItem="sdX-lG-gBS" secondAttribute="leading" constant="8" id="tzj-Vk-tcJ"/>
+                <constraint firstItem="7Lt-Zw-5jV" firstAttribute="centerY" secondItem="ja1-Tq-vb1" secondAttribute="centerY" id="vgD-Wv-fWb"/>
+                <constraint firstAttribute="trailing" secondItem="eq3-RT-E4Y" secondAttribute="trailing" constant="8" id="xUT-9j-Uo5"/>
+            </constraints>
+            <size key="customSize" width="177" height="72"/>
+            <connections>
+                <outlet property="IBdesc" destination="tp4-lT-zZ3" id="JJY-Sx-eMu"/>
+                <outlet property="IBissues" destination="7Lt-Zw-5jV" id="2fK-f8-l0o"/>
+                <outlet property="IBlanguage" destination="eq3-RT-E4Y" id="vud-TL-YBA"/>
+                <outlet property="IBname" destination="AjD-fG-UlV" id="Rmc-Fq-lfq"/>
+            </connections>
+            <point key="canvasLocation" x="67.5" y="8"/>
         </collectionViewCell>
     </objects>
 </document>
