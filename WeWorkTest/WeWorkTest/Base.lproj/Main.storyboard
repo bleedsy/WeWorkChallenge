@@ -225,6 +225,60 @@
             </objects>
             <point key="canvasLocation" x="1229.8828125" y="96.632503660322101"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="CcD-Hz-zr4">
+            <objects>
+                <viewController id="SQY-Lb-fKX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gwi-A6-akT"/>
+                        <viewControllerLayoutGuide type="bottom" id="gde-nF-wzm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Tf-kp-GNn">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yYr-C0-4TT">
+                                <rect key="frame" x="0.0" y="130" width="768" height="894"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmA-Ue-nWy">
+                                <rect key="frame" x="548" y="35.5" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.52549019610000003" green="0.83137254900000002" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LC2-HZ-qmo"/>
+                                    <constraint firstAttribute="height" constant="50" id="UnA-yS-dim"/>
+                                </constraints>
+                                <state key="normal" title="Create Issue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJI-pz-XQs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="syl-en-dNt">
+                                <rect key="frame" x="20" y="33" width="259.5" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="47"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gde-nF-wzm" firstAttribute="top" secondItem="yYr-C0-4TT" secondAttribute="bottom" id="1d3-Va-fwM"/>
+                            <constraint firstItem="yYr-C0-4TT" firstAttribute="leading" secondItem="3Tf-kp-GNn" secondAttribute="leading" id="EBV-fe-bZO"/>
+                            <constraint firstAttribute="trailing" secondItem="yYr-C0-4TT" secondAttribute="trailing" id="MjA-BF-Q2n"/>
+                            <constraint firstItem="syl-en-dNt" firstAttribute="top" secondItem="Gwi-A6-akT" secondAttribute="bottom" constant="13" id="RVz-sM-hVa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GmA-Ue-nWy" secondAttribute="trailing" id="Xy5-Dr-dni"/>
+                            <constraint firstItem="yYr-C0-4TT" firstAttribute="top" secondItem="syl-en-dNt" secondAttribute="bottom" constant="42" id="wtW-sq-2bP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="syl-en-dNt" secondAttribute="leading" id="ywP-AS-BWR"/>
+                            <constraint firstItem="GmA-Ue-nWy" firstAttribute="centerY" secondItem="syl-en-dNt" secondAttribute="centerY" id="zxo-GF-4qh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cmm-e3-vK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956.25" y="96.09375"/>
+        </scene>
     </scenes>
     <resources>
         <image name="github_logo" width="562" height="208"/>
