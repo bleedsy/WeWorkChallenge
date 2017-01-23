@@ -18,13 +18,24 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUpUI()
         getIssues()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func setUpUI() {
+        // Register custom cells
+        registerCells()
+        
+        IBrepoName.text = welRepo.welName
+    }
+    
+    func registerCells() {
+        IBtableView.register(UINib(nibName: "IssueCell", bundle: nil), forCellReuseIdentifier: "issueCell")
     }
     
     func getIssues() {
@@ -45,7 +56,13 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "test")
-        return cell!
+        let issue = welIssues[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell") as! IssueCell
+        cell.setUpCell(issue: issue)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
 }

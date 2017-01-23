@@ -12,7 +12,7 @@ class APIManagerImplement: NSObject {
     
     static let GETuserInfo = "/user"
     static let GETrepos = "/user/repos"
-    static let GETissues = "/repos/%@/%@/issues"
+    static let GETissues = "/repos/%@/%@/issues?state=all"
 
     class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETuserInfo

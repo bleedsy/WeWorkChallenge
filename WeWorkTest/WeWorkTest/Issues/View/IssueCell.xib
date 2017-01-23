@@ -19,19 +19,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC8-Nw-msM">
-                        <rect key="frame" x="5" y="5" width="36.5" height="23.5"/>
+                        <rect key="frame" x="15" y="5" width="36.5" height="23.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-gS-4Go">
-                        <rect key="frame" x="5" y="33.5" width="35.5" height="17.5"/>
+                        <rect key="frame" x="15" y="33.5" width="35.5" height="17.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjQ-m2-ylW">
-                        <rect key="frame" x="5" y="56" width="37" height="17.5"/>
+                        <rect key="frame" x="15" y="56" width="37" height="17.5"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -43,7 +43,7 @@
                     <constraint firstItem="YjQ-m2-ylW" firstAttribute="top" secondItem="JDa-gS-4Go" secondAttribute="bottom" constant="5" id="MGM-Z7-WpQ"/>
                     <constraint firstItem="JDa-gS-4Go" firstAttribute="top" secondItem="nC8-Nw-msM" secondAttribute="bottom" constant="5" id="NOe-Tl-MhY"/>
                     <constraint firstItem="JDa-gS-4Go" firstAttribute="leading" secondItem="nC8-Nw-msM" secondAttribute="leading" id="je1-Y6-LK3"/>
-                    <constraint firstItem="nC8-Nw-msM" firstAttribute="leading" secondItem="TP6-QN-ODv" secondAttribute="leading" constant="5" id="rPV-YW-IDW"/>
+                    <constraint firstItem="nC8-Nw-msM" firstAttribute="leading" secondItem="TP6-QN-ODv" secondAttribute="leading" constant="15" id="rPV-YW-IDW"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

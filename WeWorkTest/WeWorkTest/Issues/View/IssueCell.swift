@@ -47,5 +47,11 @@ class IssueCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setUpCell(issue: IssueObject) {
+        title = issue.welTitle
+        body = issue.welBody
+        state = issue.welState
+    }
 
 }
