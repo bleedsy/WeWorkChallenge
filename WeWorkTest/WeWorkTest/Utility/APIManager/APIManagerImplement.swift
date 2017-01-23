@@ -59,23 +59,23 @@ class APIManagerImplement: NSObject {
     
     class func patchUpdateIssue(repoName: String, number: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: PATCHissue, UserInfo.currentUser.welLogin!, repoName, number)
-        let params : [String:String] = ["title" : title, "body" : body!, "state" : state!]
-        APIManager.makePatchRequest(fullEndpoint, params: params as NSDictionary?) { (result, error) in
-            print(error)
+        let params : [String : Any] = ["title" : title, "body" : body!, "state" : state!]
+        APIManager.makePatchRequest(fullEndpoint, params: params) { (result, error) in
             if let issue = result as? NSDictionary {
-                print(issue)
+                completion(issue, error)
             }
+            completion(nil, error)
         }
     }
     
-    class func createIssue(repoName: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func createIssue(repoName: String, title: String, body: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: POSTissue, UserInfo.currentUser.welLogin!, repoName)
-        let params : [String:String] = ["title" : title, "body" : body!]
-        APIManager.makePatchRequest(fullEndpoint, params: params as NSDictionary?) { (result, error) in
-            print(error)
+        let params : [String : Any] = ["title" : title, "body" : body!]
+        APIManager.makePostRequest(fullEndpoint, params: params) { (result, error) in
             if let issue = result as? NSDictionary {
-                print(issue)
+                completion(issue, error)
             }
+            completion(nil, error)
         }
     }
 }

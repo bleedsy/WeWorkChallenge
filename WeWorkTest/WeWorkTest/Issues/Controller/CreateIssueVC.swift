@@ -11,9 +11,11 @@ import UIKit
 class CreateIssueVC: EditIssueVC {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        IBissueStatus.isHidden = true
+        IBbody.layer.borderColor = UIColor.lightGray.cgColor
+        IBbody.layer.borderWidth = 2
+        IBbody.layer.masksToBounds = true
+        IBbody.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +23,18 @@ class CreateIssueVC: EditIssueVC {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: Actions
+    
+    @IBAction override func save(sender: UIButton) {
+        let title = IBtitle.text
+        let body = IBbody.text
+        APIManagerImplement.createIssue(repoName: welRepo.welName!, title: title ?? "", body: body) { (result, error) in
+            if error == nil {
+                
+            } else {
+                self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
+            }
+        }
     }
-    */
 
 }

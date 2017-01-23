@@ -256,6 +256,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="createIssueWithSender:" destination="SQY-Lb-fKX" eventType="touchUpInside" id="Y71-k1-h1R"/>
                                     <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJI-pz-XQs"/>
                                 </connections>
                             </button>
@@ -288,10 +289,10 @@
             </objects>
             <point key="canvasLocation" x="1956.25" y="96.09375"/>
         </scene>
-        <!--Edit IssueVC-->
+        <!--Create IssueVC-->
         <scene sceneID="oC9-97-pCT">
             <objects>
-                <viewController storyboardIdentifier="EditIssueVC" id="UwV-F3-ID1" customClass="EditIssueVC" customModule="WeWorkTest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditIssueVC" id="UwV-F3-ID1" customClass="CreateIssueVC" customModule="WeWorkTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gr4-G4-OTN"/>
                         <viewControllerLayoutGuide type="bottom" id="RSW-Ob-3a5"/>
@@ -300,7 +301,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62z-5D-Cvv">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="62z-5D-Cvv">
                                 <rect key="frame" x="43" y="314" width="679" height="30"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>

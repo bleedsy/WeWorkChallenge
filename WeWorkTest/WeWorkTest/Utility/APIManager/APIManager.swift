@@ -28,14 +28,14 @@ class APIManager: NSObject {
         }
     }
     
-    class func makePatchRequest(_ endPoint: URLConvertible, params: NSDictionary?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func makePatchRequest(_ endPoint: URLConvertible, params: Parameters?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let credentialData = "\(Constants.userInfo.username):\(Constants.userInfo.password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
         let headers = ["Authorization": "Basic \(base64Credentials)"]
         
         Alamofire.request(endPoint,
                           method: .patch,
-                          parameters: nil,
+                          parameters: params,
                           encoding: URLEncoding.default,
                           headers:headers)
             .validate()
@@ -44,15 +44,15 @@ class APIManager: NSObject {
         }
     }
     
-    class func makePostRequest(_ endPoint: URLConvertible, params: NSDictionary?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func makePostRequest(_ endPoint: URLConvertible, params: Parameters?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let credentialData = "\(Constants.userInfo.username):\(Constants.userInfo.password)".data(using: String.Encoding.utf8)!
         let base64Credentials = credentialData.base64EncodedString(options: [])
-        let headers = ["Authorization": "Basic \(base64Credentials)"]
+        let headers = ["Authorization": "Basic \(base64Credentials)", "Content-Type" : "application/json"]
         
         Alamofire.request(endPoint,
                           method: .post,
-                          parameters: nil,
-                          encoding: URLEncoding.default,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
                           headers:headers)
             .validate()
             .responseJSON { response in

@@ -79,4 +79,12 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
+    
+    //MARK: Actions
+    
+    @IBAction func createIssue(sender: UIButton) {
+        let createIssue = getVCFromStoryboard("Main", viewController: "EditIssueVC") as! CreateIssueVC
+        createIssue.welRepo = welRepo
+        navigationController?.pushViewController(createIssue, animated: true)
+    }
 }
