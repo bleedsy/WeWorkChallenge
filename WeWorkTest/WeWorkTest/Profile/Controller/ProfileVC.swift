@@ -16,8 +16,8 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var IBname : UILabel!
     @IBOutlet weak var IBbio : UILabel!
     @IBOutlet weak var IBcollectionView : UICollectionView!
-    @IBOutlet weak var IBfollowers : UILabel!
-    @IBOutlet weak var IBfollowing : UILabel!
+    @IBOutlet weak var IBfollowers : CustomLabel!
+    @IBOutlet weak var IBfollowing : CustomLabel!
     
     var welRepos = Array<RepoObject>()
     
@@ -48,11 +48,9 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         IBbio.text = UserInfo.currentUser.welBio
         IBfollowers.text = String(format: "%i", UserInfo.currentUser.welFollowers)
         IBfollowing.text = String(format: "%i", UserInfo.currentUser.welFollowing)
-        
-        IBfollowers.layer.masksToBounds = true
-        IBfollowers.layer.cornerRadius = IBfollowers.frame.width / 2
-        IBfollowing.layer.masksToBounds = true
-        IBfollowing.layer.cornerRadius = IBfollowing.frame.width / 2
+        // Custom method to make label circular
+        IBfollowers.setCircular()
+        IBfollowing.setCircular()
     }
     
     //MARK: API Call

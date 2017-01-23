@@ -24,6 +24,8 @@
 		CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C321E35AA3D00007300 /* UserInfo.swift */; };
 		CA1D9C3A1E35B1D000007300 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C391E35B1D000007300 /* ProfileVC.swift */; };
 		CA1D9C3C1E36444B00007300 /* RepoObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C3B1E36444B00007300 /* RepoObject.swift */; };
+		CA1D9C3E1E36487800007300 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1D9C3D1E36487800007300 /* RepoCell.xib */; };
+		CA1D9C401E36496400007300 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C3F1E36496400007300 /* CustomLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		CA1D9C341E35B10000007300 /* WeWorkTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WeWorkTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA1D9C391E35B1D000007300 /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		CA1D9C3B1E36444B00007300 /* RepoObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoObject.swift; sourceTree = "<group>"; };
+		CA1D9C3D1E36487800007300 /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
+		CA1D9C3F1E36496400007300 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				CA1D9C301E357AD200007300 /* RootVC.swift */,
+				CA1D9C3F1E36496400007300 /* CustomLabel.swift */,
 			);
 			name = CustomComponents;
 			path = WeWorkTest/CustomComponents;
@@ -260,6 +265,7 @@
 		CA1D9C381E35B1BB00007300 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA1D9C3D1E36487800007300 /* RepoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				CA1D9B971E355A9100007300 /* LaunchScreen.storyboard in Resources */,
 				CA1D9B941E355A9100007300 /* Assets.xcassets in Resources */,
 				CA1D9B921E355A9100007300 /* Main.storyboard in Resources */,
+				CA1D9C3E1E36487800007300 /* RepoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1D9C311E357AD200007300 /* RootVC.swift in Sources */,
+				CA1D9C401E36496400007300 /* CustomLabel.swift in Sources */,
 				CA1D9C281E35753E00007300 /* APIManagerImplement.swift in Sources */,
 				CA1D9C241E3571B900007300 /* APIManager.swift in Sources */,
 				CA1D9B8D1E355A9100007300 /* AppDelegate.swift in Sources */,
