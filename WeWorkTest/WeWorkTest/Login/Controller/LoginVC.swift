@@ -36,8 +36,14 @@ class LoginVC: RootVC {
 
     @IBAction func login(sender: UIButton) {
         if checkFields() == nil {
+            showLoadingView()
             APIManagerImplement.getUserInfo(completion: { (result, error) in
-                
+                self.hideLoadingView()
+                if error == nil {
+                    
+                } else {
+                    self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
+                }
             })
         } else {
             showStandardAlert("Check field", message: checkFields(), style: .alert)

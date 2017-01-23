@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class RootVC: UIViewController {
 
@@ -38,6 +39,19 @@ class RootVC: UIViewController {
         }
         self.present(alert, animated: true) {
             _ = completion
+        }
+    }
+    
+    //MARK: HUD Loading View
+    func showLoadingView() {
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
+            MBProgressHUD.showAdded(to: window, animated: true)
+        }
+    }
+    
+    func hideLoadingView() {
+        if let app = UIApplication.shared.delegate as? AppDelegate, let window = app.window {
+            MBProgressHUD.hide(for: window, animated: true)
         }
     }
 }
