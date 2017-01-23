@@ -24,6 +24,7 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         super.viewDidLoad()
 
         setUpUI()
+        getRepos()
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +51,16 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource {
         IBfollowers.layer.cornerRadius = IBfollowers.frame.width / 2
         IBfollowing.layer.masksToBounds = true
         IBfollowing.layer.cornerRadius = IBfollowing.frame.width / 2
+    }
+    
+    func getRepos() {
+        APIManagerImplement.getRepos { (repos, error) in
+            if error == nil {
+                
+            } else {
+                self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

@@ -16,15 +16,22 @@ class APIManagerImplement: NSObject {
     class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETuserInfo
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
-            if error == nil {
-                if let user = result as? NSDictionary {
-                    UserInfo.currentUser.setUserInfo(user)
-                }
-                completion(nil, nil)
-            } else {
-                completion(nil, error)
+            if let user = result as? NSDictionary {
+                UserInfo.currentUser.setUserInfo(user)
             }
+            completion(nil, error)
         }
+    }
+    
+    class func getRepos(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        let fullEndpoint = Constants.API.URL + GETrepos
+        APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
+            if let repos = result as? NSArray {
+                print(repos)
+            }
+            completion(nil, error)
+        }
+    
     }
     
 }
