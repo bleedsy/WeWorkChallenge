@@ -29,7 +29,14 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     
     func getIssues() {
         APIManagerImplement.getRepoIssues(repoName: welRepo.welName!) { (result, error) in
-            
+            if error == nil {
+                if let issues = result as? Array<IssueObject> {
+                    self.welIssues = issues
+                    self.IBtableView.reloadData()
+                }
+            } else {
+                self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
+            }
         }
     }
     

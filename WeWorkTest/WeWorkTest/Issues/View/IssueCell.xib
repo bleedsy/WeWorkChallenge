@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="eHA-AW-sCQ" customClass="IssueCell" customModule="WeWorkTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="137" height="76"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="eHA-AW-sCQ" id="TP6-QN-ODv">
+                <rect key="frame" x="0.0" y="0.0" width="137" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC8-Nw-msM">
+                        <rect key="frame" x="5" y="5" width="36.5" height="23.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JDa-gS-4Go">
+                        <rect key="frame" x="5" y="33.5" width="35.5" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Open" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjQ-m2-ylW">
+                        <rect key="frame" x="5" y="56" width="37" height="17.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="nC8-Nw-msM" firstAttribute="top" secondItem="TP6-QN-ODv" secondAttribute="top" constant="5" id="2em-2E-Fdk"/>
+                    <constraint firstItem="YjQ-m2-ylW" firstAttribute="leading" secondItem="JDa-gS-4Go" secondAttribute="leading" id="7Ik-V5-Ujq"/>
+                    <constraint firstItem="YjQ-m2-ylW" firstAttribute="top" secondItem="JDa-gS-4Go" secondAttribute="bottom" constant="5" id="MGM-Z7-WpQ"/>
+                    <constraint firstItem="JDa-gS-4Go" firstAttribute="top" secondItem="nC8-Nw-msM" secondAttribute="bottom" constant="5" id="NOe-Tl-MhY"/>
+                    <constraint firstItem="JDa-gS-4Go" firstAttribute="leading" secondItem="nC8-Nw-msM" secondAttribute="leading" id="je1-Y6-LK3"/>
+                    <constraint firstItem="nC8-Nw-msM" firstAttribute="leading" secondItem="TP6-QN-ODv" secondAttribute="leading" constant="5" id="rPV-YW-IDW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="IBbody" destination="JDa-gS-4Go" id="vJz-4b-hCc"/>
+                <outlet property="IBstate" destination="YjQ-m2-ylW" id="gcW-4h-AHv"/>
+                <outlet property="IBtitle" destination="nC8-Nw-msM" id="yMn-cL-yYh"/>
+            </connections>
+            <point key="canvasLocation" x="-143.5" y="8"/>
+        </tableViewCell>
+    </objects>
+</document>
