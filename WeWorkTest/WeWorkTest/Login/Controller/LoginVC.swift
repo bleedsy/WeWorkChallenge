@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class LoginVC: RootVC {
     
     @IBOutlet weak var IBusername : UITextField!
     @IBOutlet weak var IBpassword : UITextField!
@@ -36,9 +36,11 @@ class LoginVC: UIViewController {
 
     @IBAction func login(sender: UIButton) {
         if checkFields() == nil {
-            
+            APIManagerImplement.getUserInfo(completion: { (result, error) in
+                
+            })
         } else {
-            
+            showStandardAlert("Check field", message: checkFields(), style: .alert)
         }
     }
 }

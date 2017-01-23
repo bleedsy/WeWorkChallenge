@@ -17,9 +17,12 @@ class APIManagerImplement: NSObject {
         let fullEndpoint = Constants.API.URL + GETuserInfo
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
             if error == nil {
-                
+                if let user = result as? NSDictionary {
+                    UserInfo.currentUser.setUserInfo(user)
+                }
+                completion(nil, nil)
             } else {
-                
+                completion(nil, error)
             }
         }
     }

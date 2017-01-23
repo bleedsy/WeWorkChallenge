@@ -21,9 +21,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-//    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-//        
-//    }
+    // Animates the changing of root view controllers
+    // Takes a snapshot of the current view
+    // adds it to the new root VC
+    // sets the root vc as the new VC
+    // then removes the snapshot from the new root vc
+    func changeRootVC(_ viewController: UIViewController) {
+        if (self.window?.rootViewController == nil) {
+            self.window?.rootViewController = viewController;
+            return
+        }
+        
+        let snapShot = self.window?.snapshotView(afterScreenUpdates: true)
+        viewController.view.addSubview(snapShot!)
+        
+        window!.rootViewController = viewController
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            snapShot?.layer.opacity = 0
+            snapShot?.layer.transform = CATransform3DMakeScale(1.5, 1.5, 1.5)
+        }) { (finished: Bool) in
+            snapShot?.removeFromSuperview()
+        }
+    }
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

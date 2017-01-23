@@ -21,6 +21,7 @@
 		CA1D9C281E35753E00007300 /* APIManagerImplement.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C271E35753E00007300 /* APIManagerImplement.swift */; };
 		CA1D9C2E1E35798C00007300 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C2D1E35798C00007300 /* LoginVC.swift */; };
 		CA1D9C311E357AD200007300 /* RootVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C301E357AD200007300 /* RootVC.swift */; };
+		CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C321E35AA3D00007300 /* UserInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		CA1D9C271E35753E00007300 /* APIManagerImplement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManagerImplement.swift; sourceTree = "<group>"; };
 		CA1D9C2D1E35798C00007300 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CA1D9C301E357AD200007300 /* RootVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootVC.swift; sourceTree = "<group>"; };
+		CA1D9C321E35AA3D00007300 /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 		CA1D9C2B1E35797700007300 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CA1D9C321E35AA3D00007300 /* UserInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -523,6 +526,7 @@
 				CA1D9C241E3571B900007300 /* APIManager.swift in Sources */,
 				CA1D9B8D1E355A9100007300 /* AppDelegate.swift in Sources */,
 				CA1D9C261E35725D00007300 /* Constants.swift in Sources */,
+				CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */,
 				CA1D9C2E1E35798C00007300 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
