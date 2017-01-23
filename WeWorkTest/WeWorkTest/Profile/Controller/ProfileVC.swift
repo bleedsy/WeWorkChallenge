@@ -88,6 +88,13 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let repo = welRepos[indexPath.row]
+        let issuesController = getVCFromStoryboard("Main", viewController: "IssuesVC") as! IssuesVC
+        issuesController.welRepo = repo
+        navigationController?.pushViewController(issuesController, animated: true)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsetsMake(0, 5, 5, 0)
     }

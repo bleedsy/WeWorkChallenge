@@ -41,8 +41,9 @@ class LoginVC: RootVC {
                 self.hideLoadingView()
                 if error == nil {
                     let profileVC = self.getVCFromStoryboard("Main", viewController: "ProfileVC")
+                    let navController = UINavigationController(rootViewController: profileVC)
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.changeRootVC(profileVC)
+                    appDelegate.changeRootVC(navController)
                 } else {
                     self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
                 }

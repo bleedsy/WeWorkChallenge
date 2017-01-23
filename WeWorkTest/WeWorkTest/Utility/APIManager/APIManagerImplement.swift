@@ -12,6 +12,7 @@ class APIManagerImplement: NSObject {
     
     static let GETuserInfo = "/user"
     static let GETrepos = "/user/repos"
+    static let GETissues = "/repos/%@/%@/issues"
 
     class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETuserInfo
@@ -35,7 +36,15 @@ class APIManagerImplement: NSObject {
             }
             completion(userRepos, error)
         }
-    
     }
     
+    class func getRepoIssues(repoName: String, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        let fullEndpoint = Constants.API.URL + String(format: GETissues, UserInfo.currentUser.welLogin!, repoName)
+        APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
+            if let issues = result as? NSArray {
+                print(issues)
+            }
+            completion(result, error)
+        }
+    }
 }

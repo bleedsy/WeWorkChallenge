@@ -27,6 +27,7 @@
 		CA1D9C3E1E36487800007300 /* RepoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA1D9C3D1E36487800007300 /* RepoCell.xib */; };
 		CA1D9C401E36496400007300 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C3F1E36496400007300 /* CustomLabel.swift */; };
 		CA1D9C421E364B7900007300 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C411E364B7900007300 /* RepoCell.swift */; };
+		CA1D9C481E3656A300007300 /* IssuesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C471E3656A300007300 /* IssuesVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		CA1D9C3D1E36487800007300 /* RepoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RepoCell.xib; sourceTree = "<group>"; };
 		CA1D9C3F1E36496400007300 /* CustomLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		CA1D9C411E364B7900007300 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		CA1D9C471E3656A300007300 /* IssuesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssuesVC.swift; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		CA1D9C441E36530A00007300 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CA1D9C471E3656A300007300 /* IssuesVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				CA1D9C241E3571B900007300 /* APIManager.swift in Sources */,
 				CA1D9B8D1E355A9100007300 /* AppDelegate.swift in Sources */,
 				CA1D9C3A1E35B1D000007300 /* ProfileVC.swift in Sources */,
+				CA1D9C481E3656A300007300 /* IssuesVC.swift in Sources */,
 				CA1D9C261E35725D00007300 /* Constants.swift in Sources */,
 				CA1D9C3C1E36444B00007300 /* RepoObject.swift in Sources */,
 				CA1D9C331E35AA3D00007300 /* UserInfo.swift in Sources */,
