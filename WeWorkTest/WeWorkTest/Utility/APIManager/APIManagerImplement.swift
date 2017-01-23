@@ -41,10 +41,14 @@ class APIManagerImplement: NSObject {
     class func getRepoIssues(repoName: String, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: GETissues, UserInfo.currentUser.welLogin!, repoName)
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
+            var repoIssues = Array<IssueObject>()
             if let issues = result as? NSArray {
-                print(issues)
+                for issueDic in issues {
+                    let issue = IssueObject(result: issueDic as! NSDictionary)
+                    repoIssues.append(issue)
+                }
             }
-            completion(result, error)
+            completion(repoIssues, error)
         }
     }
 }

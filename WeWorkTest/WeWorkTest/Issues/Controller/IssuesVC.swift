@@ -13,13 +13,13 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var IBtableView : UITableView!
     @IBOutlet weak var IBrepoName : UILabel!
 
-    var welRepo: RepoObject!
-    
+    var welRepo : RepoObject!
+    var welIssues = Array<IssueObject>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        getIssues()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,7 +34,7 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return welIssues.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
