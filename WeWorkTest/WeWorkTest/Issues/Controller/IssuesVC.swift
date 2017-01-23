@@ -27,6 +27,8 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    //MARK: Setup UI
+    
     func setUpUI() {
         // Register custom cells
         registerCells()
@@ -37,6 +39,8 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     func registerCells() {
         IBtableView.register(UINib(nibName: "IssueCell", bundle: nil), forCellReuseIdentifier: "issueCell")
     }
+    
+    //MARK: API Call
     
     func getIssues() {
         APIManagerImplement.getRepoIssues(repoName: welRepo.welName!) { (result, error) in
@@ -50,6 +54,8 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
+    
+    //MARK: TableView
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return welIssues.count

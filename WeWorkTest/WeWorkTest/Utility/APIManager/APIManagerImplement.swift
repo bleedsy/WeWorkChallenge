@@ -13,7 +13,9 @@ class APIManagerImplement: NSObject {
     static let GETuserInfo = "/user"
     static let GETrepos = "/user/repos"
     static let GETissues = "/repos/%@/%@/issues?state=all"
+    static let PATCHissue = "/repos/%@/%@/issues/%@"
 
+    //MARK: Login
     class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETuserInfo
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
@@ -24,6 +26,7 @@ class APIManagerImplement: NSObject {
         }
     }
     
+    //MARK: Profile
     class func getRepos(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETrepos
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
@@ -38,6 +41,7 @@ class APIManagerImplement: NSObject {
         }
     }
     
+    //MARK: Issues
     class func getRepoIssues(repoName: String, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
         let fullEndpoint = Constants.API.URL + String(format: GETissues, UserInfo.currentUser.welLogin!, repoName)
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
@@ -49,6 +53,16 @@ class APIManagerImplement: NSObject {
                 }
             }
             completion(repoIssues, error)
+        }
+    }
+    
+    class func patchUpdateIssue(repoName: String, number: String, title: String, body: String?, state: String?, completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+        let fullEndpoint = Constants.API.URL + String(format: PATCHissue, UserInfo.currentUser.welLogin!, repoName, number)
+        let params = ["title" : title, "body" : body ?? "", "state" : state]
+        APIManager.makePatchRequest(fullEndpoint, params: params as NSDictionary?) { (result, error) in
+            if let issue = result as? NSDictionary {
+                print(issue)
+            }
         }
     }
 }
