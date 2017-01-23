@@ -80,6 +80,95 @@
             </objects>
             <point key="canvasLocation" x="116.60156249999999" y="83.89458272327964"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Efe-N2-AWa">
+            <objects>
+                <viewController id="2gB-mr-tgl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y8a-MF-fcy"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1e-O6-HUQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NSg-gy-UbW">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e9A-G6-6Gt">
+                                <rect key="frame" x="55" y="90" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Lec-7R-L9E"/>
+                                    <constraint firstAttribute="height" constant="300" id="ktl-Qa-lv1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="brl214" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="494-2X-m4n">
+                                <rect key="frame" x="394" y="90" width="161" height="66"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brandon Leeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sx-8W-nB5">
+                                <rect key="frame" x="394" y="164" width="376" height="64.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ulM-WP-2FP">
+                                <rect key="frame" x="55" y="416" width="252" height="52.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mta-hY-yOR">
+                                <rect key="frame" x="55" y="508.5" width="914" height="857.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OaQ-4b-Igp">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Xcj-R5-92Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPg-Xn-pu0">
+                                <rect key="frame" x="394" y="236.5" width="575" height="30"/>
+                                <string key="text">Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test TestTest Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test</string>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lPg-Xn-pu0" firstAttribute="leading" secondItem="7sx-8W-nB5" secondAttribute="leading" id="4ce-jB-ymV"/>
+                            <constraint firstItem="ulM-WP-2FP" firstAttribute="top" secondItem="e9A-G6-6Gt" secondAttribute="bottom" constant="26" id="AC2-uS-Ly4"/>
+                            <constraint firstItem="mta-hY-yOR" firstAttribute="leading" secondItem="ulM-WP-2FP" secondAttribute="leading" id="GiU-As-JJA"/>
+                            <constraint firstItem="mta-hY-yOR" firstAttribute="top" secondItem="ulM-WP-2FP" secondAttribute="bottom" constant="40" id="GxU-yD-mOc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lPg-Xn-pu0" secondAttribute="trailing" constant="35" id="LjK-d7-jOS"/>
+                            <constraint firstItem="e9A-G6-6Gt" firstAttribute="leading" secondItem="NSg-gy-UbW" secondAttribute="leadingMargin" constant="35" id="NC3-ah-AzG"/>
+                            <constraint firstItem="r1e-O6-HUQ" firstAttribute="top" secondItem="mta-hY-yOR" secondAttribute="bottom" id="Qet-Vg-Z8g"/>
+                            <constraint firstItem="e9A-G6-6Gt" firstAttribute="top" secondItem="y8a-MF-fcy" secondAttribute="bottom" constant="70" id="Y9v-vJ-I67"/>
+                            <constraint firstItem="lPg-Xn-pu0" firstAttribute="top" secondItem="7sx-8W-nB5" secondAttribute="bottom" constant="8" id="Z6c-Mp-pIo"/>
+                            <constraint firstItem="ulM-WP-2FP" firstAttribute="leading" secondItem="e9A-G6-6Gt" secondAttribute="leading" id="ZOJ-qE-fFe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mta-hY-yOR" secondAttribute="trailing" constant="35" id="dSL-ga-dc3"/>
+                            <constraint firstItem="494-2X-m4n" firstAttribute="top" secondItem="e9A-G6-6Gt" secondAttribute="top" id="frH-Jx-TZo"/>
+                            <constraint firstItem="7sx-8W-nB5" firstAttribute="leading" secondItem="494-2X-m4n" secondAttribute="leading" id="hiM-6f-JqM"/>
+                            <constraint firstItem="7sx-8W-nB5" firstAttribute="top" secondItem="494-2X-m4n" secondAttribute="bottom" constant="8" id="ig6-Bd-m0Q"/>
+                            <constraint firstItem="494-2X-m4n" firstAttribute="leading" secondItem="e9A-G6-6Gt" secondAttribute="trailing" constant="39" id="jQf-X8-Dta"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQz-gT-861" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="792.1875" y="83.89458272327964"/>
+        </scene>
     </scenes>
     <resources>
         <image name="github_logo" width="562" height="208"/>
