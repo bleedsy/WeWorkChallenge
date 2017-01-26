@@ -17,13 +17,20 @@ class APIManagerImplement: NSObject {
     static let POSTissue = "/repos/%@/%@/issues"
 
     //MARK: Login
-    class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Error?) -> Void) {
+    class func getUserInfo(completion: @escaping (_ result: Any?, _ error: Any?) -> Void) {
         let fullEndpoint = Constants.API.URL + GETuserInfo
         APIManager.makeGetRequest(fullEndpoint, params: nil) { (result, error) in
             if let user = result as? NSDictionary {
                 UserInfo.currentUser.setUserInfo(user)
+                
+                if let message = user["message"] as? String {
+                    completion(nil, message)
+                } else {
+                    completion(nil, error)
+                }
+            } else {
+                completion(nil, error)
             }
-            completion(nil, error)
         }
     }
     
@@ -84,8 +91,9 @@ class APIManagerImplement: NSObject {
         APIManager.makePostRequest(fullEndpoint, params: params) { (result, error) in
             if let issue = result as? NSDictionary {
                 completion(issue, error)
+            } else {
+                completion(nil, error)
             }
-            completion(nil, error)
         }
     }
 }

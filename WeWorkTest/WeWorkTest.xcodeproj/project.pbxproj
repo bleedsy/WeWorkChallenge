@@ -33,6 +33,8 @@
 		CA1D9C4E1E365F8700007300 /* IssueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C4D1E365F8700007300 /* IssueCell.swift */; };
 		CA1D9C501E36690B00007300 /* EditIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C4F1E36690B00007300 /* EditIssueVC.swift */; };
 		CA1D9C521E366F8600007300 /* CreateIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C511E366F8600007300 /* CreateIssueVC.swift */; };
+		CADBF09C1E3A4EEE00C1ED8C /* GithubVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADBF09B1E3A4DC800C1ED8C /* GithubVideo.mp4 */; };
+		CADBF09E1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBF09D1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,8 @@
 		CA1D9C4D1E365F8700007300 /* IssueCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IssueCell.swift; sourceTree = "<group>"; };
 		CA1D9C4F1E36690B00007300 /* EditIssueVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditIssueVC.swift; sourceTree = "<group>"; };
 		CA1D9C511E366F8600007300 /* CreateIssueVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIssueVC.swift; sourceTree = "<group>"; };
+		CADBF09B1E3A4DC800C1ED8C /* GithubVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GithubVideo.mp4; sourceTree = "<group>"; };
+		CADBF09D1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+VideoBackground.swift"; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CA1D9B8B1E355A9100007300 /* WeWorkTest */,
+				CADBF09A1E3A4DAD00C1ED8C /* Resources */,
 				CA1D9C2F1E357ABE00007300 /* CustomComponents */,
 				CA1D9BA01E355A9100007300 /* WeWorkTestTests */,
 				CA1D9BAB1E355A9100007300 /* WeWorkTestUITests */,
@@ -237,6 +242,7 @@
 		CA1D9C2C1E35797700007300 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CADBF09D1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +327,15 @@
 				CA1D9C4D1E365F8700007300 /* IssueCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		CADBF09A1E3A4DAD00C1ED8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CADBF09B1E3A4DC800C1ED8C /* GithubVideo.mp4 */,
+			);
+			name = Resources;
+			path = WeWorkTest/Resources;
 			sourceTree = "<group>";
 		};
 		FD3B926A8F1348F7471854F9 /* Pods */ = {
@@ -455,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADBF09C1E3A4EEE00C1ED8C /* GithubVideo.mp4 in Resources */,
 				CA1D9B971E355A9100007300 /* LaunchScreen.storyboard in Resources */,
 				CA1D9C4C1E365EBD00007300 /* IssueCell.xib in Resources */,
 				CA1D9B941E355A9100007300 /* Assets.xcassets in Resources */,
@@ -623,6 +639,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA1D9C311E357AD200007300 /* RootVC.swift in Sources */,
+				CADBF09E1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift in Sources */,
 				CA1D9C401E36496400007300 /* CustomLabel.swift in Sources */,
 				CA1D9C281E35753E00007300 /* APIManagerImplement.swift in Sources */,
 				CA1D9C241E3571B900007300 /* APIManager.swift in Sources */,

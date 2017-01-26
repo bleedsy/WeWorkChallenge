@@ -7,22 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LoginVC: RootVC {
     
     @IBOutlet weak var IBusername : UITextField!
     @IBOutlet weak var IBpassword : UITextField!
+    
+    var welAvPlayer: AVPlayer!
+    var welAvPlayerLayer: AVPlayerLayer!
+    var welPaused: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setUpVideoBackground()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func checkFields() -> String? {
         if IBusername.text == "" {
@@ -36,6 +43,8 @@ class LoginVC: RootVC {
 
     @IBAction func login(sender: UIButton) {
         if checkFields() == nil {
+            Constants.userInfo.username = IBusername.text!
+            Constants.userInfo.password = IBpassword.text!
             showLoadingView()
             APIManagerImplement.getUserInfo(completion: { (result, error) in
                 self.hideLoadingView()
@@ -45,7 +54,11 @@ class LoginVC: RootVC {
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
                     appDelegate.changeRootVC(navController)
                 } else {
-                    self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
+                    if let errorMessage = error as? String {
+                        self.showStandardAlert("Error", message: errorMessage, style: .alert)
+                    } else {
+                        self.showStandardAlert("Error", message: (error as AnyObject).localizedDescription, style: .alert)
+                    }
                 }
             })
         } else {

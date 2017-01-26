@@ -15,7 +15,7 @@ open class Constants {
     }
         
     struct userInfo {
-        static var username = "brl214"
-        static var password = "Ssorssor1"
+        static var username = ""
+        static var password = ""
     }
 }
