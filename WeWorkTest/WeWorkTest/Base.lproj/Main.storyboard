@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FX5-BD-BeI">
-                                <rect key="frame" x="385" y="521" width="254" height="50"/>
+                                <rect key="frame" x="385" y="533" width="254" height="50"/>
                                 <color key="backgroundColor" red="0.52549019607843139" green="0.83137254901960778" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="254" id="iZz-rK-fNE"/>
@@ -111,27 +110,28 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9KQ-mM-R3p">
-                                <rect key="frame" x="260" y="60" width="504" height="175"/>
+                                <rect key="frame" x="332.5" y="60" width="359" height="175"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="8cb-9i-a9c">
-                                        <rect key="frame" x="0.0" y="23" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="37.5" width="100" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="8cb-9i-a9c" secondAttribute="height" multiplier="1:1" id="jaq-jh-jcG"/>
+                                            <constraint firstAttribute="height" constant="100" id="WJ0-sG-r54"/>
+                                            <constraint firstAttribute="width" constant="100" id="wGp-FM-uVa"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GitHub" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Via-Eu-8ap">
-                                        <rect key="frame" x="152" y="26" width="341.5" height="123"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="103"/>
+                                        <rect key="frame" x="124" y="57.5" width="166" height="60"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="359" id="Eg0-Rx-zlZ"/>
                                     <constraint firstItem="8cb-9i-a9c" firstAttribute="centerY" secondItem="9KQ-mM-R3p" secondAttribute="centerY" id="FJv-7k-zJj"/>
                                     <constraint firstItem="8cb-9i-a9c" firstAttribute="leading" secondItem="9KQ-mM-R3p" secondAttribute="leading" id="KlS-W6-5t1"/>
                                     <constraint firstItem="Via-Eu-8ap" firstAttribute="leading" secondItem="8cb-9i-a9c" secondAttribute="trailing" constant="24" id="R33-E0-iId"/>
-                                    <constraint firstAttribute="width" constant="504" id="fHy-Re-jMG"/>
                                     <constraint firstItem="Via-Eu-8ap" firstAttribute="centerY" secondItem="8cb-9i-a9c" secondAttribute="centerY" id="iZH-nN-COR"/>
                                     <constraint firstAttribute="height" constant="175" id="nd1-Sv-TMf"/>
                                 </constraints>
@@ -139,7 +139,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="FX5-BD-BeI" firstAttribute="top" secondItem="QTU-YQ-8f8" secondAttribute="bottom" constant="82" id="03F-yg-U46"/>
+                            <constraint firstItem="FX5-BD-BeI" firstAttribute="top" secondItem="QTU-YQ-8f8" secondAttribute="bottom" constant="94" id="03F-yg-U46"/>
                             <constraint firstItem="QTU-YQ-8f8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Qy-5j-NUI"/>
                             <constraint firstItem="FX5-BD-BeI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2RK-8B-IY0"/>
                             <constraint firstItem="9KQ-mM-R3p" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="5oE-Ty-unM"/>
