@@ -18,6 +18,7 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
     @IBOutlet weak var IBcollectionView : UICollectionView!
     @IBOutlet weak var IBfollowers : CustomLabel!
     @IBOutlet weak var IBfollowing : CustomLabel!
+    @IBOutlet weak var IBrepositories : CustomLabel!
     
     var welRepos = Array<RepoObject>()
     
@@ -58,6 +59,7 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
         // Custom method to make label circular
         IBfollowers.setCircular()
         IBfollowing.setCircular()
+        IBrepositories.setCircular()
     }
     
     func registerCustomCells() {
@@ -73,6 +75,7 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
             if error == nil {
                 if let userRepos = repos as? Array<RepoObject> {
                     self.welRepos = userRepos
+                    self.IBrepositories.text = String(format: "%i", self.welRepos.count)
                     self.IBcollectionView.reloadData()
                 }
             } else {
