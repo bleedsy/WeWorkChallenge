@@ -14,7 +14,6 @@ class EditIssueVC: IssuesVC {
     @IBOutlet weak var IBbody : UITextView!
     @IBOutlet weak var IBissueStatus : UIButton!
     
-//    var welRepo : RepoObject!
     var welIssue : IssueObject!
 
     override func viewDidLoad() {
@@ -60,7 +59,6 @@ class EditIssueVC: IssuesVC {
         APIManagerImplement.patchUpdateIssue(repoName: welRepo.welName!, number: number, title: title, body: body, state: state) { (result, error) in
             self.hideLoadingView()
             if error == nil {
-//                _ = self.navigationController?.popViewController(animated: true)
                 self.remove()
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
