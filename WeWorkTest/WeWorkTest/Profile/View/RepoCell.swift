@@ -17,7 +17,14 @@ class RepoCell: UICollectionViewCell {
     
     var name: String? {
         didSet {
-            IBname.text = name
+            let attrs = [
+                NSFontAttributeName : UIFont(name: "HelveticaNeue-Bold", size: 17)!,
+                NSForegroundColorAttributeName : UIColor.darkGray,
+                NSUnderlineStyleAttributeName : NSUnderlineStyle.styleSingle.rawValue,
+                NSUnderlineColorAttributeName : UIColor(red:0.65, green:0.84, blue:0.52, alpha:1.0)
+                ] as [String : Any]
+            let repoTitle = NSMutableAttributedString(string: name!, attributes:attrs)
+            IBname.attributedText = repoTitle
         }
     }
     
