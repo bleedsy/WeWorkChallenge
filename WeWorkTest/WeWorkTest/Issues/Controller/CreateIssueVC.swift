@@ -36,7 +36,6 @@ class CreateIssueVC: EditIssueVC {
         APIManagerImplement.createIssue(repoName: welRepo.welName!, title: title, body: body) { (result, error) in
             self.hideLoadingView()
             if error == nil {
-//                _ = self.navigationController?.popViewController(animated: true)
                 self.remove()
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
