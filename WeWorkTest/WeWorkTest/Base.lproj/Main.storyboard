@@ -171,6 +171,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile_background" translatesAutoresizingMaskIntoConstraints="NO" id="nlJ-by-G05">
+                                <rect key="frame" x="295" y="0.0" width="729" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4PW-Sb-9ee">
                                 <rect key="frame" x="0.0" y="0.0" width="303" height="768"/>
                                 <subviews>
@@ -572,7 +576,7 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="740" height="500"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="b5Z-SO-RoJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b5Z-SO-RoJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.9248116326332092" green="0.9248116326332092" blue="0.9248116326332092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -589,5 +593,6 @@
     </scenes>
     <resources>
         <image name="login_github_logo" width="128" height="128"/>
+        <image name="profile_background" width="1872" height="1872"/>
     </resources>
 </document>
