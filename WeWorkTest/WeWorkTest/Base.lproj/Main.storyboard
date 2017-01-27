@@ -214,20 +214,20 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6lB-qq-MTM">
-                                        <rect key="frame" x="8" y="298" width="283" height="1"/>
+                                        <rect key="frame" x="8" y="298" width="283" height="2"/>
                                         <color key="backgroundColor" red="0.65121769905090332" green="0.84243243932723999" blue="0.52299898862838745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="oY9-mJ-Ih6"/>
+                                            <constraint firstAttribute="height" constant="2" id="oY9-mJ-Ih6"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repositories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9im-fy-vNf">
-                                        <rect key="frame" x="14" y="324" width="112" height="23.5"/>
+                                        <rect key="frame" x="14" y="325" width="112" height="23.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="loH-Fk-gyq" customClass="CustomLabel" customModule="WeWorkTest" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="321" width="30" height="30"/>
+                                        <rect key="frame" x="147" y="322" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.65098039215686276" green="0.84313725490196079" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Sbj-P2-7y9"/>
@@ -238,27 +238,27 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Followers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovk-c2-kXf">
-                                        <rect key="frame" x="14" y="373.5" width="86" height="23.5"/>
+                                        <rect key="frame" x="14" y="374.5" width="86" height="23.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLh-81-dNW" customClass="CustomLabel" customModule="WeWorkTest" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="370" width="30" height="30"/>
+                                        <rect key="frame" x="147" y="371" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.65121769910000005" green="0.8424324393" blue="0.52299898860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJE-ZM-xrp" customClass="CustomLabel" customModule="WeWorkTest" customModuleProvider="target">
-                                        <rect key="frame" x="147" y="419" width="30" height="30"/>
+                                        <rect key="frame" x="147" y="420" width="30" height="30"/>
                                         <color key="backgroundColor" red="0.65121769910000005" green="0.8424324393" blue="0.52299898860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Following" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nof-Ma-XcT">
-                                        <rect key="frame" x="14" y="423" width="86" height="23.5"/>
+                                        <rect key="frame" x="14" y="424" width="86" height="23.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
