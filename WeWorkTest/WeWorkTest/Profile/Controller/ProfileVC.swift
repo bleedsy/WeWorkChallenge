@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, IssuesDelegate {
     
     @IBOutlet weak var IBavatar : UIImageView!
     @IBOutlet weak var IBusername : UILabel!

@@ -8,13 +8,17 @@
 
 import UIKit
 
+protocol IssuesDelegate {
+    func remove()
+}
+
 class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var IBtableView : UITableView!
-    @IBOutlet weak var IBrepoName : UILabel!
 
     var welRepo : RepoObject!
     var welIssues = Array<IssueObject>()
+    var welDelegate : IssuesDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +43,8 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         registerCells()
         
         navigationController?.isNavigationBarHidden = false
-        IBrepoName.text = welRepo.welName
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancel))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create Issue", style: .plain, target: self, action: #selector(createIssue))
     }
     
     func registerCells() {
@@ -90,9 +95,13 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Actions
     
-    @IBAction func createIssue(sender: UIButton) {
+    func createIssue(sender: Any) {
         let createIssue = getVCFromStoryboard("Main", viewController: "CreateIssueVC") as! CreateIssueVC
         createIssue.welRepo = welRepo
         navigationController?.pushViewController(createIssue, animated: true)
+    }
+    
+    func cancel(sender: Any) {
+        welDelegate.remove()
     }
 }
