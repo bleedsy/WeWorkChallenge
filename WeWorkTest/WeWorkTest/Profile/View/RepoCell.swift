@@ -41,8 +41,8 @@ class RepoCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         IBissues.setCircular()
-        layer.borderColor = UIColor.lightGray.cgColor
-        layer.borderWidth = 2
+//        layer.borderColor = UIColor.lightGray.cgColor
+//        layer.borderWidth = 2
         layer.masksToBounds = true
         layer.cornerRadius = 5
     }

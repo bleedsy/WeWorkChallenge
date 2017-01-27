@@ -35,6 +35,7 @@
 		CA1D9C521E366F8600007300 /* CreateIssueVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1D9C511E366F8600007300 /* CreateIssueVC.swift */; };
 		CADBF09C1E3A4EEE00C1ED8C /* GithubVideo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = CADBF09B1E3A4DC800C1ED8C /* GithubVideo.mp4 */; };
 		CADBF09E1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBF09D1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift */; };
+		CADBF0A01E3ACA3400C1ED8C /* ProfileVC+PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBF09F1E3ACA3400C1ED8C /* ProfileVC+PopUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		CA1D9C511E366F8600007300 /* CreateIssueVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateIssueVC.swift; sourceTree = "<group>"; };
 		CADBF09B1E3A4DC800C1ED8C /* GithubVideo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GithubVideo.mp4; sourceTree = "<group>"; };
 		CADBF09D1E3A59FE00C1ED8C /* LoginVC+VideoBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginVC+VideoBackground.swift"; sourceTree = "<group>"; };
+		CADBF09F1E3ACA3400C1ED8C /* ProfileVC+PopUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileVC+PopUpView.swift"; sourceTree = "<group>"; };
 		D1163DEAB95D62C27DB64200 /* Pods_WeWorkTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D185C87D6263AFB619338E78 /* Pods_WeWorkTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeWorkTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB02643B270CBBA7A39BE2FB /* Pods-WeWorkTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeWorkTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeWorkTestUITests/Pods-WeWorkTestUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			children = (
 				CA1D9C3D1E36487800007300 /* RepoCell.xib */,
 				CA1D9C411E364B7900007300 /* RepoCell.swift */,
+				CADBF09F1E3ACA3400C1ED8C /* ProfileVC+PopUpView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				CA1D9C4A1E365B2A00007300 /* IssueObject.swift in Sources */,
 				CA1D9C421E364B7900007300 /* RepoCell.swift in Sources */,
 				CA1D9C2E1E35798C00007300 /* LoginVC.swift in Sources */,
+				CADBF0A01E3ACA3400C1ED8C /* ProfileVC+PopUpView.swift in Sources */,
 				CA1D9C4E1E365F8700007300 /* IssueCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
