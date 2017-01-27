@@ -50,9 +50,8 @@ class LoginVC: RootVC {
                 self.hideLoadingView()
                 if error == nil {
                     let profileVC = self.getVCFromStoryboard("Main", viewController: "ProfileVC")
-                    let navController = UINavigationController(rootViewController: profileVC)
                     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                    appDelegate.changeRootVC(navController)
+                    appDelegate.changeRootVC(profileVC)
                 } else {
                     if let errorMessage = error as? String {
                         self.showStandardAlert("Error", message: errorMessage, style: .alert)

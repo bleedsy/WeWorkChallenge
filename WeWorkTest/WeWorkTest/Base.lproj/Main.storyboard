@@ -318,8 +318,8 @@
                                     <constraint firstItem="bJE-ZM-xrp" firstAttribute="centerY" secondItem="Nof-Ma-XcT" secondAttribute="centerY" id="w0e-em-GqW"/>
                                 </constraints>
                             </view>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mta-hY-yOR">
-                                <rect key="frame" x="323" y="31" width="681" height="737"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mta-hY-yOR">
+                                <rect key="frame" x="323" y="31" width="680" height="740"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OaQ-4b-Igp">
                                     <size key="itemSize" width="50" height="50"/>
@@ -386,7 +386,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yYr-C0-4TT">
-                                <rect key="frame" x="0.0" y="174" width="1024" height="594"/>
+                                <rect key="frame" x="0.0" y="152" width="1024" height="616"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="SQY-Lb-fKX" id="4VZ-4a-VZX"/>
@@ -394,7 +394,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GmA-Ue-nWy">
-                                <rect key="frame" x="804" y="79.5" width="200" height="50"/>
+                                <rect key="frame" x="764" y="68.5" width="200" height="50"/>
                                 <color key="backgroundColor" red="0.52549019610000003" green="0.83137254900000002" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="LC2-HZ-qmo"/>
@@ -403,14 +403,20 @@
                                 <state key="normal" title="Create Issue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="createIssueWithSender:" destination="SQY-Lb-fKX" eventType="touchUpInside" id="Y71-k1-h1R"/>
                                     <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PJI-pz-XQs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WeWorkTest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="syl-en-dNt">
-                                <rect key="frame" x="20" y="77" width="259.5" height="55"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="47"/>
+                                <rect key="frame" x="20" y="77" width="154.5" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="28"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -421,7 +427,7 @@
                             <constraint firstItem="yYr-C0-4TT" firstAttribute="leading" secondItem="3Tf-kp-GNn" secondAttribute="leading" id="EBV-fe-bZO"/>
                             <constraint firstAttribute="trailing" secondItem="yYr-C0-4TT" secondAttribute="trailing" id="MjA-BF-Q2n"/>
                             <constraint firstItem="syl-en-dNt" firstAttribute="top" secondItem="Gwi-A6-akT" secondAttribute="bottom" constant="13" id="RVz-sM-hVa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GmA-Ue-nWy" secondAttribute="trailing" id="Xy5-Dr-dni"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GmA-Ue-nWy" secondAttribute="trailing" constant="40" id="Xy5-Dr-dni"/>
                             <constraint firstItem="yYr-C0-4TT" firstAttribute="top" secondItem="syl-en-dNt" secondAttribute="bottom" constant="42" id="wtW-sq-2bP"/>
                             <constraint firstAttribute="leadingMargin" secondItem="syl-en-dNt" secondAttribute="leading" id="ywP-AS-BWR"/>
                             <constraint firstItem="GmA-Ue-nWy" firstAttribute="centerY" secondItem="syl-en-dNt" secondAttribute="centerY" id="zxo-GF-4qh"/>

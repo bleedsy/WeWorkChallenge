@@ -101,7 +101,13 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
         let repo = welRepos[indexPath.row]
         let issuesController = getVCFromStoryboard("Main", viewController: "IssuesVC") as! IssuesVC
         issuesController.welRepo = repo
-        navigationController?.pushViewController(issuesController, animated: true)
+        issuesController.view.frame = CGRect(x: 0, y: 0, width: 740, height: 500)
+        issuesController.view.center = view.center
+        issuesController.view.layer.cornerRadius = 5
+        issuesController.view.layer.masksToBounds = true
+        addChildViewController(issuesController)
+        view.addSubview(issuesController.view)
+        issuesController.didMove(toParentViewController: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
