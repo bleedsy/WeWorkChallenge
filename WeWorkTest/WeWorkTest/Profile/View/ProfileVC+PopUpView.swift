@@ -8,10 +8,6 @@
 
 import UIKit
 
-var welIssuesNavController : UINavigationController!
-var welIssuesController : IssuesVC!
-var welDimOverlay : UIView!
-
 extension ProfileVC {
 
     func showIssues(repo: RepoObject) {
@@ -34,9 +30,8 @@ extension ProfileVC {
     
     //MARK: Issues Delegate
     func remove() {
-        welDimOverlay.removeFromSuperview()
         welIssuesNavController.view.removeFromSuperview()
         welIssuesNavController.removeFromParentViewController()
-        welIssuesNavController = nil
+        welDimOverlay.removeFromSuperview()
     }
 }

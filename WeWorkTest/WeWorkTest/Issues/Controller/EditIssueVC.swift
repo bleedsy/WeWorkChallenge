@@ -8,18 +8,22 @@
 
 import UIKit
 
-class EditIssueVC: RootVC {
+class EditIssueVC: IssuesVC {
     
     @IBOutlet weak var IBtitle : UITextField!
     @IBOutlet weak var IBbody : UITextView!
     @IBOutlet weak var IBissueStatus : UIButton!
     
-    var welRepo : RepoObject!
+//    var welRepo : RepoObject!
     var welIssue : IssueObject!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,14 +33,14 @@ class EditIssueVC: RootVC {
     
     //MARK: Setup UI
     
-    func setUpUI() {
+    override func setUpUI() {
         navigationController?.isNavigationBarHidden = false
         IBtitle.text = welIssue.welTitle
         IBbody.text = welIssue.welBody
         
         // Add border and corner radius to text view
         IBbody.layer.borderColor = UIColor.lightGray.cgColor
-        IBbody.layer.borderWidth = 2
+        IBbody.layer.borderWidth = 1
         IBbody.layer.masksToBounds = true
         IBbody.layer.cornerRadius = 5
         
@@ -56,7 +60,8 @@ class EditIssueVC: RootVC {
         APIManagerImplement.patchUpdateIssue(repoName: welRepo.welName!, number: number, title: title, body: body, state: state) { (result, error) in
             self.hideLoadingView()
             if error == nil {
-                _ = self.navigationController?.popViewController(animated: true)
+//                _ = self.navigationController?.popViewController(animated: true)
+                self.remove()
             } else {
                 self.showStandardAlert("Error", message: error?.localizedDescription, style: .alert)
             }

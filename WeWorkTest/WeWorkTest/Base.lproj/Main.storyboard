@@ -311,7 +311,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Xcj-R5-92Z">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="test" id="Xcj-R5-92Z">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -412,7 +412,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eO6-aY-kif">
-                                <rect key="frame" x="44.5" y="214" width="651" height="224"/>
+                                <rect key="frame" x="44.5" y="134" width="651" height="224"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="Ljl-rU-cUe"/>
@@ -422,7 +422,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Q-7t-2Xr">
-                                <rect key="frame" x="44" y="483" width="218" height="50"/>
+                                <rect key="frame" x="44" y="403" width="218" height="50"/>
                                 <color key="backgroundColor" white="0.33333333329999998" alpha="0.21169777679999999" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="MfJ-ys-SOp"/>
@@ -432,12 +432,18 @@
                                 <state key="normal" title="Close Issue">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="statusWithSender:" destination="UwV-F3-ID1" eventType="touchUpInside" id="SGx-iu-UL6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pl-hE-jS5">
-                                <rect key="frame" x="477" y="483" width="218" height="50"/>
+                                <rect key="frame" x="477" y="403" width="218" height="50"/>
                                 <color key="backgroundColor" red="0.52549019610000003" green="0.83137254900000002" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Si0-PY-8Pb"/>
@@ -447,6 +453,12 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveWithSender:" destination="UwV-F3-ID1" eventType="touchUpInside" id="9cw-gM-C65"/>
                                 </connections>
@@ -457,7 +469,7 @@
                             <constraint firstItem="eO6-aY-kif" firstAttribute="centerX" secondItem="P1I-oO-ktb" secondAttribute="centerX" id="5b9-K8-LgB"/>
                             <constraint firstItem="62z-5D-Cvv" firstAttribute="leading" secondItem="P1I-oO-ktb" secondAttribute="leadingMargin" constant="23" id="GfC-xc-58S"/>
                             <constraint firstItem="0pl-hE-jS5" firstAttribute="top" secondItem="eO6-aY-kif" secondAttribute="bottom" constant="45" id="I0U-Dr-t9p"/>
-                            <constraint firstItem="eO6-aY-kif" firstAttribute="top" secondItem="62z-5D-Cvv" secondAttribute="bottom" constant="100" id="ILH-sq-E3B"/>
+                            <constraint firstItem="eO6-aY-kif" firstAttribute="top" secondItem="62z-5D-Cvv" secondAttribute="bottom" constant="20" id="ILH-sq-E3B"/>
                             <constraint firstItem="Z5Q-7t-2Xr" firstAttribute="top" secondItem="eO6-aY-kif" secondAttribute="bottom" constant="45" id="MGB-WT-RZX"/>
                             <constraint firstItem="0pl-hE-jS5" firstAttribute="trailing" secondItem="eO6-aY-kif" secondAttribute="trailing" id="SKH-Kb-l8R"/>
                             <constraint firstItem="eO6-aY-kif" firstAttribute="width" secondItem="62z-5D-Cvv" secondAttribute="width" id="Vdb-hJ-GeL"/>
@@ -498,7 +510,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TY1-st-8j7">
-                                <rect key="frame" x="44.5" y="214" width="651" height="224"/>
+                                <rect key="frame" x="44.5" y="134" width="651" height="224"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="224" id="70a-mn-aF0"/>
@@ -508,7 +520,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Du-0c-BhD">
-                                <rect key="frame" x="261" y="483" width="218" height="50"/>
+                                <rect key="frame" x="261" y="403" width="218" height="50"/>
                                 <color key="backgroundColor" red="0.52549019610000003" green="0.83137254900000002" blue="0.3921568627" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="218" id="Nr3-jP-yVz"/>
@@ -518,6 +530,12 @@
                                 <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="saveWithSender:" destination="cMD-iX-lTc" eventType="touchUpInside" id="374-jZ-VV2"/>
                                 </connections>
@@ -530,7 +548,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Asi-fA-XD8" secondAttribute="trailing" constant="26" id="Gxl-TD-9b3"/>
                             <constraint firstItem="Asi-fA-XD8" firstAttribute="leading" secondItem="fi6-DB-fKz" secondAttribute="leadingMargin" constant="23" id="HBx-8g-fqG"/>
                             <constraint firstItem="Asi-fA-XD8" firstAttribute="top" secondItem="4bf-SI-1r6" secondAttribute="bottom" constant="20" id="Jk3-3p-3wk"/>
-                            <constraint firstItem="TY1-st-8j7" firstAttribute="top" secondItem="Asi-fA-XD8" secondAttribute="bottom" constant="100" id="bow-dq-R2f"/>
+                            <constraint firstItem="TY1-st-8j7" firstAttribute="top" secondItem="Asi-fA-XD8" secondAttribute="bottom" constant="20" id="bow-dq-R2f"/>
                             <constraint firstItem="3Du-0c-BhD" firstAttribute="centerX" secondItem="fi6-DB-fKz" secondAttribute="centerX" id="lKS-5Q-kBd"/>
                             <constraint firstItem="3Du-0c-BhD" firstAttribute="top" secondItem="TY1-st-8j7" secondAttribute="bottom" constant="45" id="tMH-bw-lj0"/>
                         </constraints>
@@ -554,9 +572,10 @@
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="740" height="500"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b5Z-SO-RoJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="b5Z-SO-RoJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.9248116326332092" green="0.9248116326332092" blue="0.9248116326332092" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

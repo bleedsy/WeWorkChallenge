@@ -22,7 +22,7 @@ class CreateIssueVC: EditIssueVC {
     override func setUpUI() {
         navigationController?.isNavigationBarHidden = false
         IBbody.layer.borderColor = UIColor.lightGray.cgColor
-        IBbody.layer.borderWidth = 2
+        IBbody.layer.borderWidth = 1
         IBbody.layer.masksToBounds = true
         IBbody.layer.cornerRadius = 5
     }

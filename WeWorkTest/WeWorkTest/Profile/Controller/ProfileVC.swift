@@ -22,6 +22,10 @@ class ProfileVC: RootVC, UICollectionViewDelegate, UICollectionViewDataSource, U
     
     var welRepos = Array<RepoObject>()
     
+    var welIssuesNavController : UINavigationController!
+    var welIssuesController : IssuesVC!
+    var welDimOverlay : UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

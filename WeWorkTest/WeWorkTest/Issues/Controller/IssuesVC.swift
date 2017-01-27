@@ -12,7 +12,7 @@ protocol IssuesDelegate {
     func remove()
 }
 
-class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
+class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource, IssuesDelegate {
     
     @IBOutlet weak var IBtableView : UITableView!
 
@@ -43,7 +43,7 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         registerCells()
         
         navigationController?.isNavigationBarHidden = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancel))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(remove))
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Create Issue", style: .plain, target: self, action: #selector(createIssue))
     }
     
@@ -86,6 +86,7 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
         let editIssue = getVCFromStoryboard("Main", viewController: "EditIssueVC") as! EditIssueVC
         editIssue.welIssue = issue
         editIssue.welRepo = welRepo
+        editIssue.welDelegate = self
         navigationController?.pushViewController(editIssue, animated: true)
     }
     
@@ -98,10 +99,11 @@ class IssuesVC: RootVC, UITableViewDelegate, UITableViewDataSource {
     func createIssue(sender: Any) {
         let createIssue = getVCFromStoryboard("Main", viewController: "CreateIssueVC") as! CreateIssueVC
         createIssue.welRepo = welRepo
+        createIssue.welDelegate = self
         navigationController?.pushViewController(createIssue, animated: true)
     }
     
-    func cancel(sender: Any) {
+    func remove() {
         welDelegate.remove()
     }
 }
